@@ -3,9 +3,7 @@ import Header from "./components/UI/Header";
 
 function App() {
   return (
-    <Card>
-      <Header />
-    </Card>
+    <Header />
   );
 }
 
