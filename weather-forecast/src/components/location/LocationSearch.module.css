@@ -1,0 +1,8 @@
+.container {
+    padding: 15px 18%;
+}
+
+.container label {
+    font-size: 09.rem;
+    display: block;
+}
