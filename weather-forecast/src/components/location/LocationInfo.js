@@ -2,7 +2,7 @@ const LocationInfo = (props) => {
     return (
         <div>
             <div>
-                <p>Weather in Sofia</p>
+                <h2>Weather in Sofia</h2>
                 <p>600м надм</p>
             </div>
             <div>
