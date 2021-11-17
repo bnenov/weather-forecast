@@ -4,8 +4,7 @@ const LocationSearch = (props) => {
     return (
         <div className={classes.container}>
             <form>
-                <label>Search Location...</label>
-                <input
+                <input className={classes.search}
                     type="text"
                     placeholder="Search for location..."
                     id="location-search"

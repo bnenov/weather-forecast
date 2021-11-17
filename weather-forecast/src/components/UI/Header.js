@@ -5,8 +5,7 @@ import classes from './Header.module.css';
 const Header = () => {
     return(
         <div className={classes.header}>
-            <LocationInfo />
-            <LocationSearch />
+            <h2>Weather App</h2>
         </div>
     )
 }
