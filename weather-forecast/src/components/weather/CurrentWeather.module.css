@@ -1,0 +1,31 @@
+.container {
+    padding: 0.6rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.location {
+    
+}
+
+.temperature {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+.temperature img {
+    margin: 0;
+    display: block;
+}
+
+.datetime {
+    display: flex;
+    width: max-content;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
