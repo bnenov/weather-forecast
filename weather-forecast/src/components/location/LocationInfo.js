@@ -5,7 +5,7 @@ const LocationInfo = (props) => {
         <div className={classes.container}>
             <div className={classes.location}>
                 <h2>Weather in Sofia</h2>
-                <p>600м надм</p>
+                <p>600m alt</p>
             </div>
             <div className={classes['time-and-weather']}>
                 <div className={classes.degrees}>
