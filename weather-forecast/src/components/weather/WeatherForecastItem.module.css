@@ -5,3 +5,8 @@
     color: rgb(24, 23, 23);
     box-shadow: 0 0 2px 2px rgba(191, 200, 236, 0.9);
 }
+
+.day:hover {
+    background-color: rgba(162, 222, 247, 0.6);
+    box-shadow: none;
+}
