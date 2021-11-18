@@ -10,16 +10,10 @@ const CurrentWeather = (props) => {
                 </div>
                 <div className={classes.datetime}>
                     <div>
-                        <h4>Thursday</h4>
+                        <p>8:36 AM</p>
                     </div>
                     <div>
-                        <p>8:36</p>
-                    </div>
-                    <div>
-                        <p>|</p>
-                    </div>
-                    <div>
-                        <p>17.11.2021</p>
+                        <span>Thursday - 18.11.2021</span>
                     </div>
                 </div>
             </div>
