@@ -25,6 +25,10 @@
     color:white;
 }
 
+.container button:hover {
+    background: rgba(128, 179, 245, 0.4);
+}
+
 .search {
     flex-grow: 2;
     border: none;
