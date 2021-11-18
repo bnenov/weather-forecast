@@ -9,46 +9,55 @@ const weatherItems = [
   {
       id: "item1",
       name: "Mon",
+      currDate: "15.11",
       icon: "/images/day.svg",
       temperature: "20"
   },
   {
       id: "item2",
       name: "Tue",
+      currDate: "16.11",
       icon: "/images/cloudy-day-1.svg",
       temperature: "18"
   },
   {
       id: "item3",
       name: "Wed",
+      currDate: "17.11",
       icon: "/images/day.svg",
       temperature: "25"
   },
   {
       id: "item4",
       name: "Thu",
+      currDate: "18.11",
       icon: "/images/rainy-1.svg",
       temperature: "20"
   },
   {
       id: "item5",
       name: "Fri",
+      currDate: "19.11",
       icon: "/images/rainy-1.svg",
       temperature: "15"
   },
   {
       id: "item6",
       name: "Sat",
+      currDate: "20.11",
       icon: "/images/snowy-1.svg",
       temperature: "10"
   },
   {
       id: "item7",
       name: "Sun",
+      currDate: "21.11",
       icon: "/images/snowy-2.svg",
       temperature: "11"
   }
 ]
+
+console.log(weatherItems);
 
 function App() {
   return (
