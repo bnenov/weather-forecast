@@ -4,10 +4,10 @@ const WeatherItemDetails = (props) => {
     return(
         <div className={classes.container}>
             <div>
-                <h2>Monday</h2>
+                <h2>{props.itemDetails.name}</h2>
             </div>
             <div>
-                <p>Temperature: 20</p>
+                <p>Temperature: {props.itemDetails.temperature}</p>
                 <p>Feels like: 22</p>
                 <p>Wind direction: north-west</p>
                 <p>Wind speed (km / h) </p>

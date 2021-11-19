@@ -12,8 +12,18 @@ const WeatherForecastItemList = (props) => {
     }
 
     useEffect(() => {
-        activeItem ? props.onClick(true) : props.onClick(false);
+        if (activeItem) {
+            const itemDetails = props.items.find(item => item.id === activeItem);
+            console.log(itemDetails);
+            props.onClick(true);
+            props.itemDetails(itemDetails);
+        } else {
+            props.onClick(false);
+        }
+
     }, [activeItem]);
+
+
 
     return (
         <ul className={classes.container}>
