@@ -1,0 +1,12 @@
+.container {
+    margin-top: 1rem;
+    background-color: rgba(162, 222, 247, 0.6);
+    border-radius: 4px;
+    color: rgb(24, 23, 23);
+    box-shadow: none;
+    padding: 1rem 1rem;
+}
+
+.container h2 {
+    margin-bottom: 2rem;
+}
