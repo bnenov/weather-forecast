@@ -3,27 +3,11 @@ import classes from './WeatherForecastItem.module.css';
 
 const WeatherForecastItem = (props) => {
 
-    const [isClicked, setIsClicked] = useState(false);
-
-    useEffect(() => {
-        props.onClick(isClicked)
-    }, [isClicked]);
-
-
-    const onClickHandler = () => {
-        if(isClicked) {
-            setIsClicked(false);
-        } else {
-            setIsClicked(true);
-        }
-        console.log("clicked");
-    }
-
-    const liClasses = `${classes.day} ${isClicked ? classes.clicked : ''}`;
-
+    const isActive = props.activeItem === props.item;
+    const liClasses = `${classes.day} ${isActive ? classes.active : ''}`;
 
     return (
-        <li key={props.id} className={liClasses} onClick={onClickHandler}>
+        <li key={props.id} className={liClasses} onClick={ () => props.onClick(props.item)}>
             <div>
                 <h3>{props.name}</h3>
                 <p>{props.currDate}</p>
