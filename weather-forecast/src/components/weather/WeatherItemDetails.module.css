@@ -10,3 +10,18 @@
 .container h2 {
     margin-bottom: 2rem;
 }
+
+.weather-details-tbl {
+    border-collapse: separate;
+    border-spacing: 0;
+    line-height: 1.5em;
+    width: 100%;
+}
+
+.weather-details-tbl th {
+    text-align: left;
+}
+
+.weather-details-tbl td {
+    text-align: center;
+}
