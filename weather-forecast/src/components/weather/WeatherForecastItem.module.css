@@ -12,7 +12,7 @@
     box-shadow: none;
 }
 
-.clicked {
+.active {
     background-color: rgba(162, 222, 247, 0.6);
     box-shadow: none;
 }
