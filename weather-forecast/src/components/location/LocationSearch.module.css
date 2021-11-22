@@ -6,7 +6,6 @@
     margin-right: auto;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
-    display: flex;
     position: relative;
 }
 
@@ -18,6 +17,12 @@
     border-radius: 5px;
     padding:2px;
 }
+
+.container input {
+    box-sizing: border-box;
+}
+
+
 
 .container button {
     border:1px white;
@@ -37,4 +42,42 @@
 
 input:focus {
     outline: 0;
+}
+
+.dropdown {
+    margin: 0;
+    padding: 0;
+    max-width: 60%;
+    position: relative;
+    display: block;
+}
+
+.dropdown ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    list-style: none;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 50%;
+}
+
+.dropdown ul::before {
+    content: "";
+}
+
+.dropdown li {
+    margin: 0;
+    padding: 0.5rem 2px;
+    cursor: pointer;
+}
+
+.dropdown li:hover {
+    text-decoration: underline;
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.dropdown-hidden {
+    display: none;
 }
