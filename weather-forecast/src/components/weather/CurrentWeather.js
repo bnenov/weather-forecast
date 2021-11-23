@@ -1,5 +1,4 @@
 import { useDate } from '../../hooks/useDate';
-import { getCurrentTime } from '../../utils/getCurrentTime';
 import classes from './CurrentWeather.module.css';
 
 const CurrentWeather = (props) => {
