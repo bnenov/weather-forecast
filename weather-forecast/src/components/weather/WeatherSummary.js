@@ -7,9 +7,9 @@ import { useState } from 'react/cjs/react.development';
 const WeatherSummary = (props) => {
 
     const [data, setData] = useState({
-        location: "Test",
-        country: "TS",
-        temperature: "5"
+        location: "",
+        country: "",
+        temperature: ""
     });
 
     const onWeatherRequest = async () => {

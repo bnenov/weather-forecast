@@ -1,20 +1,23 @@
-import { getCurrentTime } from '../../utils/getCurrentTime';
+import { useDate } from '../../hooks/useDate';
 import classes from './CurrentWeather.module.css';
 
 const CurrentWeather = (props) => {
+
+    const {date, time} = useDate();
+
     return (
         <div className={classes.container}>
             <div className={classes.location}>
                 <div>
                     <h2>Weather in {props.data.city}, {props.data.country}</h2>
-                    <p>600m alt</p>
+                    {/* <p>600m alt</p> */}
                 </div>
                 <div className={classes.datetime}>
                     <div>
-                        <p>{getCurrentTime()}</p>
+                        <p>{time}</p>
                     </div>
                     <div>
-                        <span>Thursday - 18.11.2021</span>
+                        <span>{date}</span>
                     </div>
                 </div>
             </div>

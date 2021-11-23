@@ -68,7 +68,10 @@ const weatherItems = [
 
 function App() {
 
-  const [locationData, setLocationData] = useState();
+  const [locationData, setLocationData] = useState({
+    city: "Sofia",
+    country: "BG"
+  });
 
   const onSearchHandler = (data) => {
     setLocationData(data);
