@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { useState } from "react/cjs/react.development";
 import LocationSearch from "./components/location/LocationSearch";
 import Card from "./components/UI/Card";
 import Header from "./components/UI/Header";
@@ -64,15 +65,25 @@ const weatherItems = [
   }
 ]
 
-console.log(weatherItems);
 
 function App() {
+
+  const [locationData, setLocationData] = useState();
+
+  const onSearchHandler = (data) => {
+    setLocationData(data);
+  }
+
+
+
+  console.log(locationData);
+
   return (
     <Fragment>
       <Header />
-      <LocationSearch />
+      <LocationSearch onLocationSearch={onSearchHandler} />
       <Card>
-        <WeatherSummary />
+        <WeatherSummary data={locationData}/>
       </Card>
       <Card>
         <WeatherForecast items={weatherItems} />

@@ -2,12 +2,15 @@ import { useState } from 'react/cjs/react.development';
 import classes from './LocationSearch.module.css';
 import jsonp from 'jsonp';
 import { Fragment } from 'react';
+import { getCountryCode } from '../../utils/getCountryCode';
 
 const LocationSearch = (props) => {
 
     const [searchInputVal, setSearchInputVal] = useState('');
     const [searchSuggestions, setSearchSuggestions] = useState([]);
     const [error, setError] = useState(null);
+    const [city, setCity] = useState('');
+    const [country, setCountry] = useState('');
 
 
     const onChange = (e) => {
@@ -36,14 +39,27 @@ const LocationSearch = (props) => {
         setSearchInputVal(searchVal);
     };
 
-    const onClick = (selectedVal) => {
-        console.log(selectedVal);
+    const onClick = async (selectedVal) => {
+
         setSearchInputVal(selectedVal);
+        const data = selectedVal.split(',');
+        setCity(data[0]);
+        const ctry = await getCountryCode(data[2]);
+        console.log(ctry);
+        setCountry(ctry);
         setSearchSuggestions([]);
     }
 
     const onSubmit = (e) => {
         e.preventDefault();
+
+        const data = {
+            city: city,
+            country: country
+        }
+
+        props.onLocationSearch(data);
+
         setSearchInputVal('');
     }
 
