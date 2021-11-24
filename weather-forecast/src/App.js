@@ -46,23 +46,24 @@ const weatherItems = [
       currDate: "19.11",
       icon: "/images/rainy-1.svg",
       temperature: "15"
-  },
-  {
-      id: "item6",
-      name: "Sat",
-      fullName: "Saturday",
-      currDate: "20.11",
-      icon: "/images/snowy-1.svg",
-      temperature: "10"
-  },
-  {
-      id: "item7",
-      name: "Sun",
-      fullName: "Sunday",
-      currDate: "21.11",
-      icon: "/images/snowy-2.svg",
-      temperature: "11"
   }
+  // ,
+  // {
+  //     id: "item6",
+  //     name: "Sat",
+  //     fullName: "Saturday",
+  //     currDate: "20.11",
+  //     icon: "/images/snowy-1.svg",
+  //     temperature: "10"
+  // },
+  // {
+  //     id: "item7",
+  //     name: "Sun",
+  //     fullName: "Sunday",
+  //     currDate: "21.11",
+  //     icon: "/images/snowy-2.svg",
+  //     temperature: "11"
+  // }
 ]
 
 
