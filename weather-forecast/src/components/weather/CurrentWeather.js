@@ -1,4 +1,5 @@
 import { useDate } from '../../hooks/useDate';
+import { getWeatherIcon } from '../../utils/getWeatherIcon';
 import classes from './CurrentWeather.module.css';
 
 const CurrentWeather = (props) => {
@@ -26,10 +27,10 @@ const CurrentWeather = (props) => {
                     <h1>{Math.ceil(props.data.temperature)} °C</h1>
                 </div>
                 <div>
-                    <img src={'/images/day.svg'}></img>
+                    <img src={`/images/${getWeatherIcon(props.data.weatherIcon)}`}></img>
                 </div>
                 <div>
-                    <p>Sunny</p>
+                    <p>{props.data.weatherDescription}</p>
                 </div>
             </div>
         </div>

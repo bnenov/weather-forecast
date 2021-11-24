@@ -3,6 +3,8 @@
     display: flex;
     justify-content: space-between;
     color: white;
+    background-color: rgba(154, 203, 243, 0.1);
+    border-radius: 5px;
 }
 
 .location {
@@ -16,10 +18,15 @@
     margin: 0;
 }
 
+.temperature p {
+    text-transform: capitalize;
+}
+
 
 
 .temperature img {
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
 }
 

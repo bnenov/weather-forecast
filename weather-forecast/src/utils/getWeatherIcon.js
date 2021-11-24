@@ -1,7 +1,7 @@
 export const getWeatherIcon = (openWeatherMapIconId) => {
     switch(openWeatherMapIconId) {
-        case '01d': return 'night.svg';
-        case '01n': return 'day.svg';
+        case '01d': return 'day.svg';
+        case '01n': return 'night.svg';
         case '02d': return 'cloudy-day-1.svg';
         case '02n': return 'cloudy-night-1.svg';
         case '03d': return 'cloudy-day-2.svg';

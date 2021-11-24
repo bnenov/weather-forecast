@@ -9,7 +9,9 @@ const WeatherSummary = (props) => {
     const [data, setData] = useState({
         location: "",
         country: "",
-        temperature: ""
+        temperature: "",
+        weatherIcon: "",
+        weatherDescription: ""
     });
 
     const onWeatherRequest = async () => {
@@ -23,6 +25,8 @@ const WeatherSummary = (props) => {
                 city: result.name,
                 country: props.data.country,
                 temperature: result.main.temp,
+                weatherIcon: result.weather[0].icon,
+                weatherDescription: result.weather[0].description
             }
 
             setData(transformedData);

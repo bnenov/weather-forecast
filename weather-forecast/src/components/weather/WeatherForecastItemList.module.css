@@ -1,6 +1,7 @@
 .container {
     display: flex;
     justify-content: space-between;
+    clear: left;
     text-align: center;
     list-style-type: none;
     padding: 0;
