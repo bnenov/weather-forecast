@@ -3,6 +3,7 @@ import classes from './LocationSearch.module.css';
 import jsonp from 'jsonp';
 import { Fragment } from 'react';
 import { getCountryCode } from '../../utils/getCountryCode';
+import { getLocationCoordinates } from '../../utils/getLocationCoordinates';
 
 const LocationSearch = (props) => {
 
@@ -11,6 +12,7 @@ const LocationSearch = (props) => {
     const [error, setError] = useState(null);
     const [city, setCity] = useState('');
     const [country, setCountry] = useState('');
+    const [geoLocation, setGeoLocation] = useState();
 
 
     const onChange = (e) => {
@@ -43,10 +45,16 @@ const LocationSearch = (props) => {
 
         setSearchInputVal(selectedVal);
         const data = selectedVal.split(',');
-        setCity(data[0]);
+        const cty = data[0];
+        setCity(cty);
         const ctry = await getCountryCode(data[2]);
         console.log(ctry);
         setCountry(ctry);
+
+        const geoLoc = await getLocationCoordinates({city: cty, country: ctry});
+        console.log(geoLoc);
+        setGeoLocation(geoLoc);
+
         setSearchSuggestions([]);
     }
 
@@ -55,7 +63,9 @@ const LocationSearch = (props) => {
 
         const data = {
             city: city,
-            country: country
+            country: country,
+            lat: Math.round( geoLocation.lat * 100 + Number.EPSILON ) / 100,
+            lon: Math.round( geoLocation.lon * 100 + Number.EPSILON ) / 100
         }
 
         props.onLocationSearch(data);

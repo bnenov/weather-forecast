@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useState } from "react/cjs/react.development";
 
-export const useDate = () => {
+export const useDate = (unixDate = new Date()) => {
 
     const locale = 'en';
-    const [currentDate, setCurrentDate] = useState(new Date());
+    const [currentDate, setCurrentDate] = useState(unixDate);
 
     useEffect(() => {
         const timer = setInterval(() => {
