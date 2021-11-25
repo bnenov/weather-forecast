@@ -36,7 +36,7 @@ const WeatherItemDetails = (props) => {
                     </tr>
                     {/* windspeeds */}
                     <tr>
-                        <th>Wind speed (km/h)</th>
+                        <th>Wind speed (m/s)</th>
                         {props.itemDetails.hourly.map((item) => (
                             <td>{item.windSpeed}</td>
                         ))}
