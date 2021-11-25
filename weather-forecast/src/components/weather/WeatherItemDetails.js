@@ -1,3 +1,4 @@
+import { getWeatherIcon } from '../../utils/getWeatherIcon';
 import classes from './WeatherItemDetails.module.css';
 
 const WeatherItemDetails = (props) => {
@@ -5,68 +6,43 @@ const WeatherItemDetails = (props) => {
         <div className={classes.container}>
             <table className={classes['weather-details-tbl']}>
                 <tbody>
-                    {/* times */}
+                    {/* hours */}
                     <tr>
-                        <th>{props.itemDetails.fullName}</th>
-                        <td>03:00</td>
-                        <td>06:00</td>
-                        <td>09:00</td>
-                        <td>12:00</td>
-                        <td>15:00</td>
-                        <td>18:00</td>
-                        <td>21:00</td>
-                        <td>00:00</td>
+                        <th>{props.itemDetails.day}</th>
+                        {props.itemDetails.hourly.map((hour) => (
+                            <td>{hour.time}</td>
+                        ))}
                     </tr>
                     {/* icons */}
                     <tr>
                         <th></th>
-                        <td><img src="/images/day.svg" alt="sunny"/></td>
-                        <td><img src="/images/day.svg" alt="sunny" /></td>
-                        <td><img src="/images/day.svg" alt="sunny" /></td>
-                        <td><img src="/images/day.svg" alt="sunny" /></td>
-                        <td><img src="/images/day.svg" alt="sunny" /></td>
-                        <td><img src="/images/day.svg" alt="sunny" /></td>
-                        <td><img src="/images/day.svg" alt="sunny" /></td>
-                        <td><img src="/images/day.svg" alt="sunny" /></td>
+                        {props.itemDetails.hourly.map((item) => (
+                            <td><img src={`/images/${getWeatherIcon(item.icon)}`} /></td>
+                        ))}
                     </tr>
                     {/* temperatures */}
                     <tr>
                         <th>Temperature (°C)</th>
-                        <td>10°</td>
-                        <td>12°</td>
-                        <td>12°</td>
-                        <td>14°</td>
-                        <td>18°</td>
-                        <td>18°</td>
-                        <td>12°</td>
-                        <td>10°</td>
+                        {props.itemDetails.hourly.map((item) => (
+                            <td>{item.temperature.temp}°</td>
+                        ))}
                     </tr>
                     {/* windchills */}
                     <tr>
                         <th>Feels like (°C)</th>
-                        <td>10°</td>
-                        <td>12°</td>
-                        <td>12°</td>
-                        <td>14°</td>
-                        <td>18°</td>
-                        <td>18°</td>
-                        <td>12°</td>
-                        <td>10°</td>
+                        {props.itemDetails.hourly.map((item) => (
+                            <td>{item.temperature.feelsLike}°</td>
+                        ))}
                     </tr>
                     {/* windspeeds */}
                     <tr>
                         <th>Wind speed (km/h)</th>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>4</td>
-                        <td>5</td>
+                        {props.itemDetails.hourly.map((item) => (
+                            <td>{item.windSpeed}</td>
+                        ))}
                     </tr>
                     {/* percips */}
-                    <tr>
+                    {/* <tr>
                         <th>Precipitation (mm/3h)</th>
                         <td>-</td>
                         <td>-</td>
@@ -76,9 +52,9 @@ const WeatherItemDetails = (props) => {
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
-                    </tr>
+                    </tr> */}
                     {/* perciprobs */}
-                    <tr>
+                    {/* <tr>
                         <th>Chance of precipitation</th>
                         <td>0%</td>
                         <td>0%</td>
@@ -88,7 +64,7 @@ const WeatherItemDetails = (props) => {
                         <td>0%</td>
                         <td>0%</td>
                         <td>0%</td>
-                    </tr>
+                    </tr> */}
                 </tbody>
             </table>
         </div>
