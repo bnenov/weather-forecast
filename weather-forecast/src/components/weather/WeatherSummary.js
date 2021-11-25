@@ -7,7 +7,7 @@ import { useState } from 'react/cjs/react.development';
 const WeatherSummary = (props) => {
 
     const [data, setData] = useState({
-        location: "",
+        city: "",
         country: "",
         temperature: "",
         weatherIcon: "",
@@ -30,6 +30,15 @@ const WeatherSummary = (props) => {
             }
 
             setData(transformedData);
+
+            // const updatedLocation = {
+            //     city: transformedData.city,
+            //     country: transformedData.country,
+            //     lat: Math.round( result.coord.lat * 100 + Number.EPSILON ) / 100,
+            //     lon: Math.round( result.coord.lon * 100 + Number.EPSILON ) / 100
+            // }
+
+            // props.onLocationUpdate(updatedLocation);
         }
     }
 

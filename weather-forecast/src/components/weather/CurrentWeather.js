@@ -24,7 +24,7 @@ const CurrentWeather = (props) => {
             </div>
             <div className={classes.temperature}>
                 <div>
-                    <h1>{Math.ceil(props.data.temperature)} °C</h1>
+                    <h1>{Math.round(props.data.temperature)} °C</h1>
                 </div>
                 <div>
                     <img src={`/images/${getWeatherIcon(props.data.weatherIcon)}`}></img>

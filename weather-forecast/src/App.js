@@ -71,26 +71,28 @@ function App() {
 
   const [locationData, setLocationData] = useState({
     city: "Sofia",
-    country: "BG"
+    country: "BG",
+    lat: 42.70,
+    lon: 23.32
   });
 
-  const onSearchHandler = (data) => {
+  const onLocationHandler = (data) => {
     setLocationData(data);
   }
 
 
 
-  console.log(locationData);
+  console.log("Data in App.js", locationData);
 
   return (
     <Fragment>
       <Header />
-      <LocationSearch onLocationSearch={onSearchHandler} />
+      <LocationSearch onLocationSearch={onLocationHandler} />
       <Card>
         <WeatherSummary data={locationData}/>
       </Card>
       <Card>
-        <WeatherForecast items={weatherItems} />
+        <WeatherForecast data={locationData} items={weatherItems} />
       </Card>
     </Fragment>
 

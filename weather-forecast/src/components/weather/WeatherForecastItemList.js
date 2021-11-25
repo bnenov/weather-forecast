@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react/cjs/react.development";
+import { getWeatherIcon } from "../../utils/getWeatherIcon";
 import WeatherForecastItem from "./WeatherForecastItem";
 import classes from './WeatherForecastItemList.module.css';
 
@@ -23,6 +24,7 @@ const WeatherForecastItemList = (props) => {
 
     }, [activeItem]);
 
+    console.log(props.items);
 
 
     return (
@@ -34,8 +36,8 @@ const WeatherForecastItemList = (props) => {
                         activeItem={activeItem}
                         item={item.id}
                         onClick={onClickHandler}
-                        name={item.name}
-                        icon={item.icon}
+                        name={item.dayShort}
+                        icon={`/images/${getWeatherIcon(item.weatherIcon)}`}
                         temperature={item.temperature}
                         currDate={item.currDate}
                     />
