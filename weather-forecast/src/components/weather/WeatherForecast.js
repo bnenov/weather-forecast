@@ -19,12 +19,13 @@ const WeatherForecast = (props) => {
 
             const transformedData = result.daily.slice(0, 5).map(day => {
                 let date = new Date(day.dt * 1000);
+                let dayFullName = date.toLocaleDateString('en', { weekday: 'long' });
 
                 return (
                     {
-                        id: date.toLocaleDateString('en', { weekday: 'long' }),
-                        day: date.toLocaleDateString('en', { weekday: 'long' }),
-                        dayShort: date.toLocaleDateString('en', { weekday: 'long' }).substring(0, 3),
+                        id: dayFullName,
+                        day: dayFullName,
+                        dayShort: dayFullName.substring(0, 3),
                         currDate: date.getDate() + '.' + (date.getMonth() + 1),
                         weatherIcon: day.weather[0].icon,
                         temperature: Math.round(day.temp.max)
