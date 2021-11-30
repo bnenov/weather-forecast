@@ -4,6 +4,8 @@ A simple weather app built with react, using the Open Weather Map API.
 
 ![weather-app-main](https://github.com/bnenov/weather-forecast/blob/main/images/image-main.PNG)
 
+![weather-app-details](https://github.com/bnenov/weather-forecast/blob/main/images/image-details.PNG)
+
 ## Features
 
 - Get daily and coming weather forecasts (5 day forecast)
