@@ -1,8 +1,10 @@
+import { API_KEY } from "./Constants";
+
 export const getLocationCoordinates = async (locationData) => {
 
     console.log("Inside getLocationCoordinates: ", locationData);
 
-    const urlCoordinates = `http://api.openweathermap.org/geo/1.0/direct?q=${locationData.city},${locationData.country}&limit=1&appid=3ef3666eec611215185ab5da277e8d69`;
+    const urlCoordinates = `http://api.openweathermap.org/geo/1.0/direct?q=${locationData.city},${locationData.country}&limit=1&appid=${API_KEY}`;
 
     console.log(urlCoordinates);
     const response = await fetch(urlCoordinates);
